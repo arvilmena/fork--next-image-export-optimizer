@@ -3,8 +3,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "bunx next build",
     "export": "next build && cd .. && npm run build && cd example && node ../dist/optimizeImages.js",
+    "bunExport": "bunx next build && cd .. && bun run build && cd example && bun run --bun ../dist/optimizeImages.js",
     "start": "next start",
     "lint": "next lint"
   },
